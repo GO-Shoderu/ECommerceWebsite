@@ -1,7 +1,9 @@
+// functions
 // function log(message){
 //     console.log(message);
 // }
 
+// variables
 // var message = 'Hello World';
 
 // log(message);
@@ -22,6 +24,7 @@
 
 // doSomething();
 
+// dataTypes
 // let a: number;
 // let b: boolean;
 // let c: string;
@@ -42,3 +45,46 @@
 // let backgroundColor2 = Color.Green;
 // let backgroundColor3 = Color.Red;
 
+// let message;
+// message = 'abc';
+// let endsWithC = (<string>message).endsWith('c');
+// let alternativeWay = (message as string).endsWith('c');
+
+// let log = function (message: any) {
+//     console.log(message);    
+// }
+
+// arrow function
+// let doLog = (message: any) => {
+//     console.log(message);    
+// }
+
+// Interfaces
+// interface Point{
+//     x: number,
+//     y: number
+// }
+// interfaces can only have declarations and not implementations
+// the above code can also have the declaration of a function
+
+// arrow function
+// let drawPoint = (point: Point) => {
+
+// }
+
+// classes
+class Pointer{
+    x: number;
+    y: number;
+
+    draw(){
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+
+    getDistance(){
+        // 
+    }
+}
+
+let point: Pointer;
+point.draw();
