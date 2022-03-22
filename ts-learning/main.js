@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var pointer_1 = require("./pointer");
 // functions
 // function log(message){
 //     console.log(message);
@@ -53,17 +56,68 @@
 // arrow function
 // let drawPoint = (point: Point) => {
 // }
-// classes
-var Pointer = /** @class */ (function () {
-    function Pointer() {
-    }
-    Pointer.prototype.draw = function () {
-        console.log('X: ' + this.x + ', Y: ' + this.y);
-    };
-    Pointer.prototype.getDistance = function () {
-        // 
-    };
-    return Pointer;
-}());
-var point;
+// // classes
+// class Pointer{
+//     //using the private keyword to avoid direct access
+// //    private x: number;
+// //    private y: number;
+//     constructor(private _x: number, private _y:number){
+//         // this.x = x;
+//         // this.y = y;
+//     }
+//     draw(){
+//         // can be written like this
+//         console.log('X: ' + this._x + ', Y: ' + this._y);
+//         // or like this
+//         console.log('X: ' + this.getX() + ', Y: ' + this.getY());
+//     }
+//     // this function below can be written like this 
+//     getX(){
+//         return this.x;
+//     }
+//     // or like this
+//     get x(){
+//         return this.x;
+//     }
+//     // the above code is called a property
+//     getY(){
+//         return this.y;
+//     }
+//     // this function below can be written like this 
+//     setX(x: number){
+//         if (x < 0) {
+//             throw new Error("value cannot be less than 0.");
+//         }
+//         this.x = x;
+//     }
+//     // or like this
+//     set x(x: number){
+//         if (x < 0) {
+//             throw new Error("value cannot be less than 0.");
+//         }
+//         this.x = x;
+//     }
+//     // the above code is called a property
+//     setY(y: number){
+//         if (y < 0) {
+//             throw new Error("value cannot be less than 0.");
+//         }
+//         this._y = y;
+//     }
+// }
+// converted the class above to a module, imported as a module on line 1
+// object
+// without constructor
+// let point = new Pointer();  //an object is an instance of a class
+// point.x = 1;
+// point.y = 2;
+// point.draw();
+// with a constructor
+var point = new pointer_1.Pointer(1, 2);
 point.draw();
+point.setX(10);
+point.setY(20);
+point.draw();
+// trying to access property that was created
+point.x = 15;
+console.log(point.x);
